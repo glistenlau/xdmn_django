@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from xiong.views import HelloWorld
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('xiong/', include('xiong.urls'))
+path('', HelloWorld.as_view(), name='helloword')
 ]
